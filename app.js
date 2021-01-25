@@ -27,15 +27,11 @@ const articleSchema = {
 
 const Article = mongoose.model("Article", articleSchema);
 
-// const article = new Article({
-//     _id: "5c18f35cde40ab6cc551cd60",
-//     title: "Jack Bauer",
-//     content:
-//         "Jack Bauer once stepped into quicksand. The quicksand couldn't escape and nearly drowned.",
-//     __v: 0,
-// });
-
-// article.save();
+////// HTTP Verbs ///////
+// app.get("/articles");
+// app.post("/articles");
+// app.delete("/articles");
+/////////////////////////
 
 /////// Chaining methods
 
@@ -73,11 +69,56 @@ app.route("/articles")
         });
     });
 
-////// HTTP Verbs ///////
-// app.get("/articles");
-// app.post("/articles");
-// app.delete("/articles");
-/////////////////////////
+app.route("/articles/:title")
+    .get(function (req, res) {
+        const requestedTitle = req.params.title;
+        Article.findOne(
+            { title: requestedTitle },
+            function (err, foundArticle) {
+                if (!err) {
+                    res.send(foundArticle);
+                } else {
+                    res.send(err);
+                }
+            }
+        );
+    })
+    .put(function (req, res) {
+        Article.update(
+            { title: req.params.title },
+            { title: req.body.title, content: req.body.content },
+            { overwrite: true },
+            function (err, result) {
+                if (!err) {
+                    res.send("DB was updated!");
+                } else {
+                    res.send(err);
+                }
+            }
+        );
+    })
+    .patch(function (req, res) {
+        Article.update(
+            { title: req.params.title },
+            { $set: req.body },
+            function (err) {
+                if (!err) {
+                    res.send("DB was updated!");
+                } else {
+                    res.send(err);
+                }
+            }
+        );
+    })
+    .delete(function (req, res) {
+        Article.deleteOne({ title: req.params.title }, function (err) {
+            if (!err) {
+                res.send("Article has been deleted from DB");
+            } else {
+                res.send(err);
+            }
+        });
+    });
 
 app.listen(8080, function () {
     console.log("App is listening on port 8080");

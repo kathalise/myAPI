@@ -1,0 +1,38 @@
+({
+    "_id": "600df7091a72ea9614507349",
+    "title": "REST",
+    "content": "REST ist short for REpresentational State Transfer. It's an architectural style for designing APIs."
+},
+{
+    "_id": "5c139771d79ac8eac11e754a",
+    "title": "API",
+    "content": "API stands for Application Programming Interface. It is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer."
+},
+{
+    "_id": "5c1398aad79ac8eac11e7561",
+    "title": "Bootstrap",
+    "content": "This is a framework developed by Twitter that contains pre-made front-end templates for web design"
+},
+{
+    "_id": "5c1398ecd79ac8eac11e7567",
+    "title": "DOM",
+    "content": "The Document Object Model is like an API for interacting with our HTML"
+},
+{
+    "_id": "5c18f35cde40ab6cc551cd60",
+    "title": "Jack Bauer",
+    "content": "Jack Bauer once stepped into quicksand. The quicksand couldn't escape and nearly drowned.",
+    "__v": 0
+},
+{
+    "_id": "600eb5d427557256479a5277",
+    "title": "Seinfeld",
+    "content": "After all the hype, a magical 9 seasons of endless laughter, and an unforgettable cast nobody will ever be able to recreate, it has come to light that this incredible sitcom we know and love was never even intended to be! The original concept saw the series as a one-off! The 90-minute special titled “Stand Up” was slated to air in place of Saturday Night Live for one night. It’s unimaginable to think that we may have been without this show!",
+    "__v": 0
+},
+{
+    "_id": "600eb6d1040d7c568ed7e8bd",
+    "title": "The Seinfeld Soup",
+    "content": "'The Soup Nazi' remains one of the most popular episodes of Seinfeld. The character was actually based on a real person named Al Yeganeh who was notoriously strict with his rules at his New York soup kitchen. Seinfeld was actually banned from Yeganeh's soup kitchen over the character, and for Seinfeld’s use of the word “Nazi.”",
+    "__v": 0
+})
